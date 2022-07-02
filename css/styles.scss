@@ -1,0 +1,439 @@
+$font-dark: #212529;
+$font-grey: #7f8288;
+$font-grey-light: #979CA5;
+$color-yellow: #ffbf44;
+$color-white: #fff;
+$bg-dark: #121a23;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    color: $font-grey;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.btn {
+    padding: 20px 45px 20px 45px;
+    border-radius: 3px;
+    color: $font-dark;
+    text-decoration: none;
+    font-weight: 600;
+    &.btn-primary {
+        background-color: $color-yellow;
+    }
+}
+
+.background-overlay {
+    background-color: $bg-dark;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.heading-title {
+    color: $color-yellow;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.heading {
+    color: $font-dark;
+    font-family: 'Lato', sans-serif;
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+
+.banner {
+    background-image: url(../images/banner-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 0;
+    text-align: center;
+    position: relative;
+    color: $color-white;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    .container {
+        flex-direction: column;
+        max-width: 800px;
+        .heading {
+            color: $color-white;
+            font-size: 36px;
+        }
+        p{
+            margin-bottom: 15px;
+        }
+        .btn {
+            max-width: 200px;
+            margin: 0 auto;
+        }
+    }
+}
+
+.top-section {
+    background-color: $color-white;
+    padding: 5px 0;
+
+    .container {
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo {
+        img {
+            height: 75px;
+        }
+    }
+}
+
+.phone {
+    display: flex;
+    .box-icon {
+        background-color: $color-yellow;
+        width: 50px;
+        height: 50px;
+        border-radius: 2px;
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: $font-dark;
+    }
+    .box-title {
+        font-family: "Lato", Sans-serif;
+        font-size: 22px;
+        font-weight: 900;
+        color: $font-dark;
+    }
+    .box-description {
+        a {
+            color: $font-grey;
+        }
+    }
+}
+
+.about-us {
+    padding: 75px 0 50px;
+    .container {
+        align-items: center;
+    }
+
+    .image {
+        width: 50%;
+        padding: 10px;
+        .img-left-container {
+            text-align: left;
+            .img-left {
+                margin-bottom: 20px;
+                margin: -85% 0% 0% 0%;
+                img {
+                    width: 55%;
+                    border-style: solid;
+                    border-width: 20px 20px 20px 0px;
+                    border-color: $color-white;
+                    border-radius: 3px 3px 3px 3px;
+                } 
+            }
+        }
+        .img-right {
+            text-align: right;
+            img {
+                width: 80%;
+                border-radius: 3px;
+                box-shadow: -80px 0px 0px -30px $color-yellow;
+            }
+                
+        }
+    }
+
+    .content {
+        width: 50%;
+        margin-left: 50px;
+        li {
+            padding-left: 10px;
+            margin-left: 15px;
+            margin-bottom: 15px;
+            &::before {
+                content: "\2022";
+                color: $color-yellow;
+                font-weight: bold;
+                display: inline-block; 
+                width: 20px;
+                margin-left: -1em;
+                font-size: 24px;
+              }
+        }
+    }
+}
+
+.contact {
+    background-image: url(../images/contact-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 0;
+    color: $color-white;
+    padding: 100px 0;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .container {
+        flex-direction: column;
+        text-align: center;
+        .heading {
+            color: $color-white;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        .btn {
+            max-width: 300px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+
+            i {
+                font-size: 32px;
+                margin-right: 10px;
+            }
+
+            span {
+                margin-top: -7px;
+            }
+
+            &.btn-primary {
+                background-color: $color-yellow;
+            }
+        }
+    }
+}
+
+.products {
+    padding: 75px 0;
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    ul.product-images {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            padding: 10px;
+            margin: 10px;
+            width: 30%;
+            height: 275px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: #171A1D;
+    color: $font-grey-light;
+    font-size: 14px;
+    
+    h2 {
+        font-size: 24px;
+        color: #fff;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .address {
+        padding: 50px 0;
+        display: flex;
+        justify-content: space-between;
+        .contact-info {
+            li {
+                display: flex;
+                margin-bottom: 15px;
+                a {
+                    color: $font-grey-light;
+                }
+            }
+            i {
+                color: $color-yellow;
+                margin-right: 10px;
+                margin-top: 3px;
+            }
+        }
+
+        .make-appointment {
+            max-width: 310px;
+            p {
+                margin-bottom: 20px;
+            }
+            .box-title {
+                color: $font-grey-light;
+            }
+            .box-description {
+                color: $font-grey-light;
+                margin-bottom: 0;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .copyright {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 20px 0;
+        text-align: center;
+    }
+}
+
+/* 
+    Responsive CSS 
+    */
+@media (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .heading {
+        font-size: 32px;
+    }
+        
+    .banner {
+        height: 450px;
+        .container {
+            .heading {
+                color: $color-white;
+                font-size: 26px;
+            }
+        }
+    } 
+
+    .about-us {
+        padding: 75px 0 0px;
+        .image {
+            .img-left-container {
+                .img-left {
+                    img {
+                        width: 55%;
+                        border-style: solid;
+                        border-width: 10px 10px 10px 0px;
+                    }
+                }
+            }
+        }
+
+        .content {
+            li {
+                padding-left: 10px;
+                margin-left: 15px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    .products {
+        ul.product-images {
+            li {
+                height: 200px;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .top-section {
+        padding: 10px 0;
+        .container {
+            justify-content: center;
+        }
+        .phone {
+            display: none;
+        }
+    }
+
+    .banner {
+        .container {
+            .heading {
+                color: #fff;
+                font-size: 20px;
+            }
+        }
+    } 
+
+    .about-us {
+        padding: 50px 0 0px;
+        .container {
+            flex-direction: column;
+        }
+        .image {
+            width: 100%;
+            margin-bottom: 100px;
+            padding: 0;
+        }
+        .content {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    .products {
+        ul.product-images {
+            li {
+                padding: 2%;
+                margin: 1%;
+                width: 48%;
+            }
+        } 
+    }
+
+    .footer {
+        .address {
+            flex-direction: column;
+            .contact-info {
+                order: 2
+            }
+            .make-appointment {
+                order: 1;
+                max-width: 100%;
+                margin-bottom: 30px;
+            }
+        }
+    } 
+}
